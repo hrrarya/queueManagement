@@ -18,3 +18,9 @@ body {
 .clientNamePart {
   margin-top: 20px;
 }
+.old {
+  color: blue;
+}
+.emergency {
+  color: red;
+}
