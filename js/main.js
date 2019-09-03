@@ -14,6 +14,7 @@ const { name } = list;
 let ulList;
 let clientList;
 let countClient;
+let counter = 0;
 let del = document.querySelectorAll(".del");
 
 resetInput = () => {
@@ -24,6 +25,7 @@ resetInput = () => {
 };
 addName = singleName => {
   ulList = document.getElementById("ulList");
+  counter = name.length;
 
   if (singleName.type == "old") {
     ulList.innerHTML += `<li class="list-group-item old">${singleName.name} <span class="del" data-id="${singleName.id}">X</span><span class="del old">Old</span></li>`;
@@ -36,7 +38,7 @@ addName = singleName => {
   del = document.querySelectorAll(".del");
 
   removeItem();
-  countClients(name.length);
+  checkAvailableClients();
 };
 
 function showList() {
@@ -54,7 +56,8 @@ function showList() {
       }
     });
   del = document.querySelectorAll(".del");
-  countClients(name.length);
+
+  checkAvailableClients();
 }
 
 handleSubmit = () => {
@@ -95,7 +98,7 @@ function removeItem() {
           p.isRunning = true;
           clientList.removeChild(targetName);
           countClient = name.filter(n => n.isRunning !== true);
-          countClients(countClient.length);
+          checkAvailableClients();
         });
     });
   });
@@ -106,8 +109,14 @@ function countClients(totalClient) {
   if (totalClient > 0)
     countClient.innerHTML = totalClient + " people is in the list";
   else {
+    totalClient = 0;
     countClient.innerHTML = "No people in the list";
   }
+}
+
+function checkAvailableClients() {
+  let count = name.filter(n => n.isRunning !== true).length;
+  countClients(count);
 }
 
 showList();
