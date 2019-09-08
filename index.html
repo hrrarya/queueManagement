@@ -8,11 +8,20 @@
     />
     <title>Queue Management</title>
     <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/eocjs-newsticker.css" />
     <link rel="stylesheet" href="css/font.min.css" />
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
     <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div id="news">
+            সিরিয়ালের জন্য ০১৮********* নাম্বারে সকাল ৮.০০-৮.৩০ মিনিট এর মধ্যে
+            যোগাযোগ করবেন।
+          </div>
+        </div>
+      </div>
       <div class="row">
         <div class="col-md-12">
           <h3 class="countClient"></h3>
@@ -28,6 +37,7 @@
                 placeholder="Enter name..."
                 id="name"
                 name="name"
+                required
               />
             </div>
             <div class="form-check">
@@ -62,6 +72,25 @@
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/eocjs-newsticker.js"></script>
+    <script src="js/axios.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      // $("#news").eocjsNewsticker({
+      //   speed: 50,
+
+      //   // time to wait before starting
+
+      //   timeout: 2,
+
+      //   // divider between news
+
+      //   divider: "***",
+
+      //   // or 'ajax'
+
+      //   type: "static"
+      // });
+    </script>
   </body>
 </html>

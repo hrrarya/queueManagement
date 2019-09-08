@@ -1,10 +1,5 @@
-const list = {
-  name: [
-    { id: 1, name: "Rabin Hood", isRunning: false },
-    { id: 2, name: "Ashiqur Rahman", isRunning: false },
-    { id: 4, name: "Tamanna Bhatia", isRunning: false },
-    { id: 3, name: "A.T.M Shamsuzzaman", type: "old", isRunning: false }
-  ]
+let list = {
+  name: []
 };
 
 const input = document.getElementById("name");
@@ -62,22 +57,22 @@ function showList() {
 
 handleSubmit = () => {
   let value = input.value;
-  let singleList = new Object();
-  singleList.id = name.length + 1;
-  singleList.name = value;
-  singleList.isRunning = false;
-  if (checkOld.checked) {
-    singleList.type = "old";
-  }
-  if (checkEmergency.checked) {
-    singleList.type = "emergency";
-  }
+  if (value != "") {
+    let singleList = new Object();
+    singleList.id = name.length + 1;
+    singleList.name = value;
+    singleList.isRunning = false;
+    if (checkOld.checked) {
+      singleList.type = "old";
+    }
+    if (checkEmergency.checked) {
+      singleList.type = "emergency";
+    }
 
-  name.push(singleList);
+    name.push(singleList);
 
-  // console.log(name);
-  addName(singleList);
-  // showList();
+    addName(singleList);
+  }
 };
 
 submit.addEventListener("click", e => {
@@ -121,4 +116,5 @@ function checkAvailableClients() {
 
 showList();
 removeItem();
+
 // showList(); //SHOW ALL NAME IN THE LIST;
