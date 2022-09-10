@@ -4,27 +4,63 @@
 }
 body {
   margin-top: 20px;
+  background:black;
+  color:white;
+}
+.right {
+  float: right;
+}
+.btn-default {
+  background:black;
+  color:white;
 }
 .del,
 .delz {
   float: right;
-  /* margin-left: 30px; */
-  /* display: inline-block; */
   padding: 0px 5px;
   color: #fff;
   font-weight: bold;
-  background-color: gray;
+  /* background-color: gray; */
+  background-color: black;
   border: 1px solid #ccc;
 }
 .clientNamePart {
   margin-top: 20px;
 }
 .old {
-  color: blue;
+  /* color: blue; */
+  color:white;
 }
 .emergency {
   color: red;
 }
-#news {
-  font-size: 22px;
+.panel-heading {
+  font-size: 30px;
+}
+#nextClient {
+  font-size: 30px;
+}
+
+.nowClientSection,
+.nextClientSection {
+  display: none;
+}
+#adminSide {
+  display: none;
+}
+.list-group-item {
+  font-size: 25px;
+  background:black;
+  color:white;
+}
+.btn-default:hover{
+  background-color:rgba(0,0,0,0.3);
+  color:white;
+}
+.panel-default > .panel-heading {
+  /* color: #333; */
+  color:white;
+  /* background-color: #f5f5f5; */
+  background-color: black;
+	border-color: #ddd;
 }
