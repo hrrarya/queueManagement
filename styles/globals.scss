@@ -1,0 +1,14 @@
+/*
+*
+* writing scss 
+* importing scss file with @use
+* 
+*/
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+.patient-list,.patient-form ,.patient-header,.patient-start,.patient-notice-board,.patient-notice{
+  font-family: 'Kalpurush';
+}

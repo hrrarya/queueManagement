@@ -1,3 +1,8 @@
-# Queue Management Software for Hospital
+# Next JS boilerplate setup with tailwindcss, scss and multiple theming
 
-This is a simple patient queue management software developed for a doctor who is trying to show the patient that his serial in the monitor.
+### Requires
+
+- Next JS
+- Tailwindcss
+- scss
+- Jotai (for multiple color theming)
